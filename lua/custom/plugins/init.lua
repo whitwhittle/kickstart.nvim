@@ -2,4 +2,9 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {}
+
+-- Load custom treesitter grammar for org filetype
+
+return {'nvim-orgmode/orgmode', config = function()
+  require('orgmode').setup{}
+end}
